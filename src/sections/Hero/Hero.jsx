@@ -3,9 +3,10 @@ import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <header className="header">
       <Navbar />
-    </div>
+      <div className="hero"></div>
+    </header>
   );
 };
 
