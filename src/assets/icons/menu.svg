@@ -1,0 +1,20 @@
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>43 copy</title>
+  <g id="menu">
+    <circle class="cls-1" cx="32" cy="32" r="28.3232" />
+    <line class="cls-1" x1="43.76295" y1="32" x2="20.23705" y2="32" />
+    <line class="cls-1" x1="43.76295" y1="20.44684" x2="20.23705" y2="20.44684" />
+    <line class="cls-1" x1="43.76295" y1="43.55316" x2="20.23705" y2="43.55316" />
+  </g>
+</svg>

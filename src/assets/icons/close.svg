@@ -1,0 +1,20 @@
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1,
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>45 copy</title>
+  <g id="close">
+    <circle class="cls-1" cx="32" cy="32" r="28" />
+    <line class="cls-2" x1="44.24479" y1="43.08776" x2="22.06927" y2="20.91224" />
+    <line class="cls-2" x1="22.06927" y1="43.08776" x2="44.24479" y2="20.91224" />
+  </g>
+</svg>
