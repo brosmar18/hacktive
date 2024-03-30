@@ -1,9 +1,30 @@
-import React from 'react'
+import {
+  About,
+  ChooseUs,
+  Contact,
+  Discount,
+  Footer,
+  Hero,
+  Prices,
+  Services,
+} from "./sections";
+import "./App.scss";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div className="app">
+      <Hero />
+      <main>
+        <About />
+        <Services />
+        <ChooseUs />
+        <Discount />
+        <Prices />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
