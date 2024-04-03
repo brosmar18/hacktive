@@ -1,4 +1,146 @@
+@import "../../responsive.scss";
+
 .hero {
-  background: var(--Color-7, linear-gradient(180deg, #28d6b1 0%, #7a7fdb 100%));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #28d6b1 0%, #7a7fdb 100%);
   height: 100vh;
+
+  @include md {
+    justify-content: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  &__content {
+    max-width: 50%;
+
+    @include md {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    margin-bottom: 1rem;
+
+    @include lg {
+      font-size: 70px;
+    }
+
+    @include md {
+      font-size: 60px;
+    }
+
+    @include sm {
+      font-size: 50px;
+    }
+
+    span {
+      color: #00ffc9;
+    }
+  }
+
+  &__subtitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #00ffc9;
+    margin-bottom: 1rem;
+
+    @include md {
+      font-size: 18px;
+      letter-spacing: 3px;
+    }
+
+    @include sm {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__text {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+
+    @include md {
+      font-size: 15px;
+    }
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 63px;
+
+    @include md {
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include sm {
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #2f337d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    @include md {
+      font-size: 0.95rem;
+      padding: 0.65rem 1.3rem;
+    }
+
+    @include sm {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &:last-child {
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: 600;
+
+      @include md {
+        font-size: 15px;
+      }
+
+      @include sm {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__image-placeholder {
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
