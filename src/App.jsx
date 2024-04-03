@@ -9,10 +9,12 @@ import {
   Services,
 } from "./sections";
 import "./App.scss";
+import { Navbar } from "./components";
 
 const App = () => {
   return (
     <div className="app">
+      <Navbar />
       <Hero />
       <main>
         <About />
