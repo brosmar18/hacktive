@@ -1,60 +1,32 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
-import { menu, close } from "../../assets";
+import { NavLink, Link } from "react-router-dom";
+import { logo } from "../../assets";
 import "./Navbar.scss";
 
+const Menu = () => (
+  <>
+    {navLinks.map((link, index) => (
+      <NavLink className="link" key={`navbar-links-${index}`} to={link.route}>
+        {link.label}
+      </NavLink>
+    ))}
+  </>
+);
+
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav className="nav">
-      <div className="nav__container">
-        <img src="/logo.png" alt="logo" className="logo" />
-        <div className="nav__links">
-          {navLinks.map((link, index) => (
-            <Link
-              key={`navbar-link-${index}`}
-              to={link.route}
-              className="nav__link"
-            >
-              {link.label}
-            </Link>
-          ))}
+      <div className="nav__links">
+        <div className="nav__links-logo">
+          <img src={logo} alt="logo" />
         </div>
-        <img src="/search.svg" alt="search icon" className="nav__search" />
-        <div className="nav__mobile">
-          <img
-            src={menu}
-            alt="menu icon"
-            onClick={toggleNavbar}
-            className="nav__mobile-icon"
-          />
+        <div className="nav__links-container">
+          <Menu />
         </div>
       </div>
-      <div className={`nav__mobile-menu ${isOpen ? "open" : ""}`}>
-        <div className="nav__mobile-header">
-          <img src="/logo.png" alt="logo" className="nav__mobile-logo" />
-          <img
-            src={close}
-            alt="close icon"
-            onClick={toggleNavbar}
-            className="nav__mobile-close"
-          />
-        </div>
-        <ul className="nav__mobile-links">
-          {navLinks.map((link, index) => (
-            <li key={`mobile-link-${index}`}>
-              <Link to={link.route} onClick={toggleNavbar}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <div className="nav__links-auth">
+        <Link to="/">Sign In</Link>
+        <Link to="/">Sign Up</Link>
       </div>
     </nav>
   );

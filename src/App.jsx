@@ -14,8 +14,10 @@ import { Navbar } from "./components";
 const App = () => {
   return (
     <div className="app">
-      <Navbar />
-      <Hero />
+      <div className="hero__gradient-bg">
+        <Navbar />
+        <Hero />
+      </div>
       <main>
         <About />
         <Services />
